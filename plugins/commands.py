@@ -23,7 +23,7 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/Tmaadda')
+                InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/movies_seriesupdates')
             ],
             [
                 InlineKeyboardButton('🙆🏻 Help 🦾', url=f"https://t.me/{temp.U_NAME}?start=help"),
@@ -31,7 +31,7 @@ async def start(client, message):
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
-        await asyncio.sleep(2) # 😢 https://github.com/prajith2252/LazyPrincess/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
+        await asyncio.sleep(2) # 😢 https://github.com/Rcbforever111/LazyPrincess/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
         if not await db.get_chat(message.chat.id):
             total=await client.get_chat_members_count(message.chat.id)
             await client.send_message(LOG_CHANNEL, script.LOG_TEXT_G.format(message.chat.title, message.chat.id, total, "Unknown"))       
@@ -42,16 +42,16 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('How To Use our Bot', url='https://telegram.me/how_to_use_tmafilesbot/2')
+            InlineKeyboardButton('How To Use our Bot', url='https://t.me/movies_seriesupdates/585')
         ], [
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TMAAdda'),
-            InlineKeyboardButton('👥 Support Chat', url='https://telegram.me/tmadiscuss')
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/Telugudubbing_moviess'),
+            InlineKeyboardButton('👥 Support Chat', url='https://telegram.me/helpline_4u')
         ], [
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton('😊 About', callback_data='about')
         ],[
-            InlineKeyboardButton('💲 Get Premium Access', url='https://telegram.me/tmasupportbot')
+            InlineKeyboardButton('💲 Get Premium Access', url='https://telegram.me/Kumbipaakamadmin_bot')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -65,7 +65,7 @@ async def start(client, message):
         try:
             invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
         except ChatAdminRequired:
-            logger.error("Hey Sona, Ek dfa check kr lo ki main Channel mei Add hu ya nhi...!")
+            logger.error("Hey Einstein!, I Like Your Smartness. Kindly Join main Channel...!")
             return
         btn = [
             [
@@ -91,16 +91,16 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-             InlineKeyboardButton('How To Use our Bot', url='https://telegram.me/how_to_use_tmafilesbot/2')
+             InlineKeyboardButton('How To Use our Bot', url='https://telegram.me/movies_seriesupdates/585')
         ], [
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TMAAdda'),
-            InlineKeyboardButton('👥 Support Chat', url='https://telegram.me/tmadiscuss')
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/Telugudubbing_moviess'),
+            InlineKeyboardButton('👥 Support Chat', url='https://telegram.me/helpline_4u')
         ], [
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton('😊 About', callback_data='about')
         ],[
-            InlineKeyboardButton('💲 Get Premium Access', url='https://telegram.me/tmasupportbot')
+            InlineKeyboardButton('💲 Get Premium Access', url='https://telegram.me/Kumbipaakamadmin_bot')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
