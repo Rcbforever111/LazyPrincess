@@ -160,20 +160,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
-                    return await query.answer('♥️ Love @Tmaadda ♥️')
+                    return await query.answer('♥️ Love @Telugudubbing_moviess ♥️')
             else:
                 await query.message.edit_text(
                     "I'm not connected to any groups!\nCheck /connections or connect to any groups",
                     quote=True
                 )
-                return await query.answer('♥️ Thank You Tma Support ♥️')
+                return await query.answer('♥️ Thank You @Telugudubbing_moviess ♥️')
 
         elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
             grp_id = query.message.chat.id
             title = query.message.chat.title
 
         else:
-            return await query.answer('♥️ Thank You TMA Adda ♥️')
+            return await query.answer('♥️ Thank You @Telugudubbing_moviess ♥️')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == enums.ChatMemberStatus.OWNER) or (str(userid) in ADMINS):
@@ -227,7 +227,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=keyboard,
             parse_mode=enums.ParseMode.MARKDOWN
         )
-        return await query.answer('♥️ Thank You TMA Adda ♥️')
+        return await query.answer('♥️ Thank You @Telugudubbing_moviess ♥️')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -248,7 +248,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         else:
             await query.message.edit_text('Some error occurred!!', parse_mode=enums.ParseMode.MARKDOWN)
-        return await query.answer('♥️ Thank You TMA Adda ♥️')
+        return await query.answer('♥️ Thank You @Telugudubbing_moviess ♥️')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -271,7 +271,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('♥️ Thank You Tmaadda ♥️')
+        return await query.answer('♥️ Thank You @Telugudubbing_moviess ♥️')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -289,7 +289,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('♥️ Thank You Tma Adda ♥️')
+        return await query.answer('♥️ Thank You @Telugudubbing_moviess ♥️')
     elif query.data == "backcb":
         await query.answer()
 
@@ -300,7 +300,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 "There are no active connections!! Connect to some groups first.",
             )
-            return await query.answer('♥️ Thank You TMA Adda ♥️')
+            return await query.answer('♥️ Thank You @Telugudubbing_moviess ♥️')
         buttons = []
         for groupid in groupids:
             try:
@@ -376,7 +376,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("Mere saamne jyada smart nhi banne ka sona 😒", show_alert=True)
+            await query.answer("I Like Your Smartness Einstein 😒", show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
@@ -410,13 +410,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('How To Use our Bot', url='https://telegram.me/how_to_use_tmafilesbot/2')
         ], [
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TMAAdda'),
-            InlineKeyboardButton('👥 Support Chat', url='https://telegram.me/tmadiscuss')
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/Telugudubbing_moviess'),
+            InlineKeyboardButton('👥 Support Chat', url='https://telegram.me/Helpline_4u')
         ], [
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton('😊 About', callback_data='about')
         ],[
-            InlineKeyboardButton('💲 Get Premium Access', url='https://telegram.me/tmasupportbot')
+            InlineKeyboardButton('💲 Get Premium Access', url='https://telegram.me/Kumbipaakamadmin_bot')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -424,7 +424,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-        await query.answer('♥️ Thank You TMA Adda ♥️')
+        await query.answer('♥️ Thank You @Telugudubbing_moviess ♥️')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
@@ -444,7 +444,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/tmaadda'),
+            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/Movies_seriesupdates'),
             InlineKeyboardButton('♥️ Source', callback_data='source')
         ], [
             InlineKeyboardButton('🏠 Home', callback_data='start'),
@@ -571,7 +571,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if str(grp_id) != str(grpid):
             await query.message.edit("Your Active Connection Has Been Changed. Go To /settings.")
-            return await query.answer('♥️ Thank You Tma Adda ♥️')
+            return await query.answer('♥️ Thank You @Telugudubbing_moviess ♥️')
 
         if status == "True":
             await save_group_settings(grpid, set_type, False)
@@ -618,7 +618,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
-    await query.answer('♥️ Thank You TMA Adda ♥️')
+    await query.answer('♥️ Thank You @Telugudubbing_moviess ♥️')
 
 
 async def auto_filter(client, msg, spoll=False):
@@ -633,7 +633,7 @@ async def auto_filter(client, msg, spoll=False):
             files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
             if not files:
                 await client.send_message(req_channel,f"-🦋 #REQUESTED_CONTENT 🦋-\n\n📝Content Name :{search}\nRequested By: {message.from_user.first_name}\n USER ID:{message.from_user.id}\n\n🗃",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔺 Mark as Done 🔺", callback_data="close_data")]]))
-                await message.reply_text(text=f"△ 𝙷𝚎𝚢 {message.from_user.first_name} 😎,\n\nYour Request has been sent successfully sent to our Admins!\nPlease wait for some time !\nWe will upload it as soon as possible.\n\n➟ 📝𝘾𝙤𝙣𝙩𝙚𝙣𝙩 𝙣𝙖𝙢𝙚 : {search}\n➟ 👮𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝘽𝙮 : {message.from_user.first_name}\n\n༺ @Tmaadda ༻\n\n🦋・‥☆𝘼𝘿𝙈𝙞𝙉 𝙨𝙪𝙥𝙥𝙤𝙧𝙩☆‥・🦋\n╰┈➤・☆ @Tma_SupportBot\n╰┈➤・☆ @TMABackup",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("✪ Updates Channel ✪", url="https://t.me/Tmaadda"), InlineKeyboardButton("✪ Backup Channel ✪", url="https://t.me/Tmabackup"), InlineKeyboardButton("✪ Support ✪", url="https://t.me/TmaSupportBot")],[InlineKeyboardButton("╚»♥️Thank u TmaAdda™♥️«╝", callback_data="close_data")]]))
+                await message.reply_text(text=f"△ 𝙷𝚎𝚢 {message.from_user.first_name} 😎,\n\nYour Request has been sent successfully sent to our Admins!\nPlease wait for some time !\nWe will upload it as soon as possible.\n\n➟ 📝𝘾𝙤𝙣𝙩𝙚𝙣𝙩 𝙣𝙖𝙢𝙚 : {search}\n➟ 👮𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝘽𝙮 : {message.from_user.first_name}\n\n༺ @Telugudubbing_moviess ༻\n\n🦋・‥☆𝘼𝘿𝙈𝙞𝙉 𝙨𝙪𝙥𝙥𝙤𝙧𝙩☆‥・🦋\n╰┈➤・☆ @Kumbipaakamadmin_Bot\n╰┈➤・☆ @Movies_arena_4u",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("✪ Updates Channel ✪", url="https://t.me/Movies_seriesupdates"), InlineKeyboardButton("✪ Backup Channel ✪", url="https://t.me/Kumbhipaakam"), InlineKeyboardButton("✪ Support ✪", url="https://t.me/Kumbipaakamadmin_bot")],[InlineKeyboardButton("╚»♥️Thank you @Telugudubbing_moviess™♥️«╝", callback_data="close_data")]]))
                 if settings["spell_check"]:
                     return await advantage_spell_chok(msg)
                 else:
@@ -772,7 +772,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("Hey Sona! Mujhe is naam se koi movie nhi mili, Mujhe lgta hai ki aapne spelling galat likh dii h 🤷‍♀️!\nPlease check your spelling once again 🤦‍♀️... or \n Discuss your problem with our admin here 👉 <a href='https://t.me/Discusss_Here'>Discuss Here</a> ♥️ ")
+        k = await msg.reply("Hey! No movie is found, With given spelling 🤷‍♀️!\nPlease check your spelling in google.com once again 🤦‍♀️... or \n Discuss your problem with our admin here 👉 <a href='https://t.me/Helpline_4u'>Discuss Here</a> ♥️ ")
         await asyncio.sleep(8)
         await k.delete()
         return
